@@ -1,16 +1,19 @@
-# Demux
-A python script to demultiplex illumina reads.
+# Demultiplex_practice
+A Python script for demultiplexing sequencing reads, implemented as a learning project.
 
-### Clone The Repository
-```
-git clone https://github.com/ComputationalAgronomy/demultiplex.git
-```
+Note: The efficiency of the implementation could be significantly lower than that of widely used software.
+
+## What is demultiplexing?
+It is the process of separating mixed sequencing reads from a single file into separate files for each individual sample, using unique index sequences attached to each sample to assign reads to their original source.
 
 ## Installation
-1. Required Python Package Installation
+1. Install dependencies
+
+I used some pre-built libraries for convenience rather than building everything from scratch, such as Biopython and RapidFuzz. These libraries help a lot with tasks like reading raw reads and matching index.
 ```sh
 pip install -r requirements.txt
 ```
+
 2. Local package installs
 ```sh
 pip install -e .
@@ -76,4 +79,4 @@ demux = PairedEndDemux(
 `pr_3`: The reverse primer sequence after the reverse index. Default is `"CATAGTGGGGTATCTAATCCCAGTTTG"`(MiFish-UR).
 
 ### Example
-You can use the `example.ipynb` notebook and the materials in the `example` folder to practice.
+You can use the `example.ipynb` notebook and the materials in the [`example`](/example) folder to practice.
